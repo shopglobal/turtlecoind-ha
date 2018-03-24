@@ -30,7 +30,6 @@ var daemon = new TurtleCoind({
   dbMaxOpenFiles: 100, // Number of allowed open files for the DB
   dbWriteBufferSize: 256, // Size of the DB write buffer in MB
   dbReadCacheSize: 10 // Size of the DB read cache in MB
-  pollingInterval: 10000
 })
 
 function log (message) {
