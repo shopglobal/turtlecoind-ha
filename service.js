@@ -9,7 +9,7 @@ var turtlepath = __dirname + '/path/to/TurtleCoind'
 var daemon = new TurtleCoind({
   path: turtlepath,
   dataDir: shellpath,
-  print: true,
+  print: false,
   pollingInterval: 2000, // How often to check the daemon in milliseconds
   timeout: 2000, // How long to wait for RPC responses in milliseconds
   testnet: false, // Use the testnet?
