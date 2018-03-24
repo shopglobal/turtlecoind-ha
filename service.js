@@ -1,6 +1,6 @@
 'use strict'
 
-const TurtleCoind = require('./') // Should this actually be ---> require('./TurtleCoind')
+const TurtleCoind = require('./')
 const util = require('util')
 var path = require("path")
 let turtlepath = __dirname + '/path/to/TurtleCoind'
