@@ -4,7 +4,7 @@ const TurtleCoind = require('./')
 const util = require('util')
 var path = require("path")
 let turtlepath = __dirname + '/path/to/TurtleCoind'
-let shellpath = __dirname + '/path/to/.TurtleCoin'
+let shellpath = '/path/to/.TurtleCoin'
 
 var daemon = new TurtleCoind({
   path: turtlepath, // Where can we locate TurtleCoind?
