@@ -1,11 +1,14 @@
 'use strict'
 
-const TurtleCoind = require('./')
+const TurtleCoind = require('./') // Should this actually be ---> require('./TurtleCoind')
 const util = require('util')
+var path = require("path")
+let turtlepath = __dirname + '/path/to/TurtleCoind'
+let shellpath = __dirname + '/path/to/.TurtleCoin' // or should this be ---> '/path/to/.TurtleCoin/DB'
 
 var daemon = new TurtleCoind({
-  path: '/path/to/turtlecoind',
-  dataDir: '/path/to/blockchain',
+  path: turtlepath,
+  dataDir: shellpath,
   pollingInterval: 10000
 })
 
