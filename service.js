@@ -9,9 +9,9 @@ var turtlepath = __dirname + '/path/to/TurtleCoind'
 var daemon = new TurtleCoind({
   path: turtlepath,
   dataDir: shellpath,
-  print: false,
+  print: true,
   pollingInterval: 2000, // How often to check the daemon in milliseconds
-  timeout: 2000, // How long to wait for RPC responses in milliseconds
+  timeout: 200000, // How long to wait for RPC responses in milliseconds
   testnet: false, // Use the testnet?
   enableCors: false, // Enable CORS support for the domain in this value
   enableBlockExplorer: false, // Enable the block explorer
@@ -36,8 +36,8 @@ function log (message) {
   console.log(util.format('%s: %s', (new Date()).toUTCString(), message))
 }
 
-daemon.on('start', (args, info) => {
-  console.log(info)
+daemon.on('start', (args) => {
+  daemon.stop()
   log(util.format('TurtleCoind has started... %s', args))
   log('TurtleCoind is attempting to synchronize with the network...')
 })
