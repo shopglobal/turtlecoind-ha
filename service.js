@@ -9,25 +9,6 @@ var daemon = new TurtleCoind({
   path: turtlepath, // Where can we locate TurtleCoind?
   dataDir: shellpath, // Where is the .TurtleCoin blockchain?
   pollingInterval: 2000, // How often to check the daemon in milliseconds
-  timeout: 2000, // How long to wait for RPC responses in milliseconds
-  testnet: false, // Use the testnet?
-  enableCors: false, // Enable CORS support for the domain in this value
-  enableBlockExplorer: false, // Enable the block explorer
-  rpcBindIp: '127.0.0.1', // What IP to bind the RPC server to
-  rpcBindPort: 11898, // What Port to bind the RPC server to
-  p2pBindIp: '0.0.0.0', // What IP to bind the P2P network to
-  p2pBindPort: 11897, // What Port to bind the P2P network to
-  p2pExternalPort: 0, // What External Port to bind the P2P network to for those behind NAT
-  allowLocalIp: false, // Add our own IP to the peer list?
-  peers: false, // Manually add the peer(s) to the list. Allows for a string or an Array of strings.
-  priorityNodes: false, // Manually add the priority node(s) to the peer list. Allows for a string or an Array of strings.
-  exclusiveNodes: false, // Only add these node(s) to the peer list. Allows for a string or an Array of strings.
-  seedNode: false, // Connect to this node to get the peer list then quit. Allows for a string.
-  hideMyPort: false, // Hide from the rest of the network
-  dbThreads: 2, // Number of database background threads
-  dbMaxOpenFiles: 100, // Number of allowed open files for the DB
-  dbWriteBufferSize: 256, // Size of the DB write buffer in MB
-  dbReadCacheSize: 10 // Size of the DB read cache in MB
 })
 
 function log (message) {
